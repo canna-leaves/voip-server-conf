@@ -84,7 +84,7 @@
     <param name="log-auth-failures" value="false"/>
     <param name="forward-unsolicited-mwi-notify" value="false"/>
 
-    <param name="context" value="public"/>
+    <param name="context" value="default"/>
     <param name="rfc2833-pt" value="101"/>
     <!-- port to bind to for sip traffic -->
     <param name="sip-port" value="$${internal_sip_port}"/>
@@ -107,7 +107,7 @@
     <!-- extended info parsing -->
     <!-- <param name="extended-info-parsing" value="true"/> -->
 
-    <!--<param name="aggressive-nat-detection" value="true"/>-->
+    <param name="aggressive-nat-detection" value="true"/>
     <!--
         There are known issues (asserts and segfaults) when 100rel is enabled.
         It is not recommended to enable 100rel at this time.
@@ -225,6 +225,7 @@
     <!--<param name="pass-rfc2833" value="true"/>-->
     <!--If you have ODBC support and a working dsn you can use it instead of SQLite-->
     <!--<param name="odbc-dsn" value="dsn:user:pass"/>-->
+    <param name="odbc-dsn" value="pgsql://host=freeswitch dbname=freeswitch user=freeswitch password='123456' options='-c client_min_messages=NOTICE'" />
 
     <!-- Or, if you have PGSQL support, you can use that -->
     <!--<param name="odbc-dsn" value="pgsql://hostaddr=127.0.0.1 dbname=freeswitch user=freeswitch password='' options='-c client_min_messages=NOTICE' application_name='freeswitch'" />-->
@@ -266,6 +267,7 @@
     <!--<param name="NDLB-broken-auth-hash" value="true"/>-->
     <!-- add a ;received="<ip>:<port>" to the contact when replying to register for nat handling -->
     <!--<param name="NDLB-received-in-nat-reg-contact" value="true"/>-->
+    <param name="NDLB-expires-in-register-response" value="true"/>
     <param name="auth-calls" value="$${internal_auth_calls}"/>
     <!-- Force the user and auth-user to match. -->
     <param name="inbound-reg-force-matching-username" value="true"/>
@@ -281,8 +283,8 @@
          auto                  - Use guessed ip.
          auto-nat              - Use ip learned from NAT-PMP or UPNP
     -->
-    <param name="ext-rtp-ip" value="auto-nat"/>
-    <param name="ext-sip-ip" value="auto-nat"/>
+    <param name="ext-rtp-ip" value="autonat:$${local_ip_v4}"/>
+    <param name="ext-sip-ip" value="autonat:$${local_ip_v4}"/>
 
     <!-- rtp inactivity timeout -->
     <param name="rtp-timeout-sec" value="300"/>

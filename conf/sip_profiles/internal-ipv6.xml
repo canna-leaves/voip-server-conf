@@ -61,6 +61,7 @@
     <!--<param name="pass-rfc2833" value="true"/>-->
     <!--If you have ODBC support and a working dsn you can use it instead of SQLite-->
     <!--<param name="odbc-dsn" value="dsn:user:pass"/>-->
+    <param name="odbc-dsn" value="pgsql://host=freeswitch dbname=freeswitch user=freeswitch password='123456' options='-c client_min_messages=NOTICE'" />
 
     <!--Uncomment to set all inbound calls to no media mode-->
     <!--<param name="inbound-bypass-media" value="true"/>-->
