@@ -4,6 +4,9 @@
     <extension name="hello">
       <condition field="destination_number" expression="^(10[01][0-9])$">
 	    <action application="export" data="dialed_extension=$1"/>
+        <action application="set" data="sip_h_VideoURL-RTMP=${sip_i_videourl_rtmp}"/>
+        <action application="set" data="sip_h_VideoURL-RTSP=${sip_i_videourl_rtsp}"/>
+        <action application="set" data="sip_h_VideoURL=${sip_i_videourl}"/>
         <action application="bridge" data="user/${dialed_extension}@${domain_name}"/>
       </condition>
     </extension>

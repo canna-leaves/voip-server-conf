@@ -108,6 +108,7 @@
     <!-- <param name="extended-info-parsing" value="true"/> -->
 
     <param name="aggressive-nat-detection" value="true"/>
+    <param name="parse-all-invite-headers" value="true"/>
     <!--
         There are known issues (asserts and segfaults) when 100rel is enabled.
         It is not recommended to enable 100rel at this time.
@@ -283,8 +284,8 @@
          auto                  - Use guessed ip.
          auto-nat              - Use ip learned from NAT-PMP or UPNP
     -->
-    <param name="ext-rtp-ip" value="autonat:$${local_ip_v4}"/>
-    <param name="ext-sip-ip" value="autonat:$${local_ip_v4}"/>
+    <param name="ext-rtp-ip" value="host:erhuo.tech"/>
+    <param name="ext-sip-ip" value="host:erhuo.tech"/>
 
     <!-- rtp inactivity timeout -->
     <param name="rtp-timeout-sec" value="300"/>
