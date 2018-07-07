@@ -7,6 +7,7 @@
         <action application="set" data="sip_h_VideoURL-RTMP=${sip_i_videourl_rtmp}"/>
         <action application="set" data="sip_h_VideoURL-RTSP=${sip_i_videourl_rtsp}"/>
         <action application="set" data="sip_h_VideoURL=${sip_i_videourl}"/>
+        <action application="lua" data="sdp-filter.lua"/>
         <action application="bridge" data="user/${dialed_extension}@${domain_name}"/>
       </condition>
     </extension>

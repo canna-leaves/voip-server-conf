@@ -7,7 +7,7 @@
 	   what's in this file only on-the-fly (leave it commented if you dont
 	   need it) -->
       <!-- one or more |-delim of configuration|directory|dialplan -->
-      <!--<param name="gateway-url" value="http://freeswitch/gateway" bindings="dialplan|directory"/>-->
+      <!--<param name="gateway-url" value="http://localhost:8080/api/v1/dialplan" bindings="dialplan"/>-->
       <!-- set this to provide authentication credentials to the server -->
       <!--<param name="gateway-credentials" value="muser:mypass"/>-->
       <!--<param name="auth-scheme" value="basic"/>-->

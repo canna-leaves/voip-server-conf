@@ -98,7 +98,8 @@
     <!-- ip address to bind to, DO NOT USE HOSTNAMES ONLY IP ADDRESSES -->
     <param name="sip-ip" value="$${local_ip_v4}"/>
     <param name="hold-music" value="$${hold_music}"/>
-    <param name="apply-nat-acl" value="nat.auto"/>
+    <!--<param name="apply-nat-acl" value="nat.auto"/>-->
+    <param name="apply-nat-acl" value="rfc1918"/>
 
 
     <!-- (default true) set to false if you do not wish to have called party info in 1XX responses -->
@@ -235,7 +236,7 @@
     <!--<param name="inbound-bypass-media" value="true"/>-->
 
     <!--Uncomment to set all inbound calls to proxy media mode-->
-    <!--<param name="inbound-proxy-media" value="true"/>-->
+    <param name="inbound-proxy-media" value="true"/>
 
     <!-- Let calls hit the dialplan before selecting codec for the a-leg -->
     <param name="inbound-late-negotiation" value="true"/>
@@ -269,6 +270,7 @@
     <!-- add a ;received="<ip>:<port>" to the contact when replying to register for nat handling -->
     <!--<param name="NDLB-received-in-nat-reg-contact" value="true"/>-->
     <param name="NDLB-expires-in-register-response" value="true"/>
+    <!--<param name="NDLB-sendrecv-in-session" value="true"/>-->
     <param name="auth-calls" value="$${internal_auth_calls}"/>
     <!-- Force the user and auth-user to match. -->
     <param name="inbound-reg-force-matching-username" value="true"/>
