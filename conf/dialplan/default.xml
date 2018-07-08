@@ -10,7 +10,9 @@
         <action application="lua" data="sdp-filter.lua"/>
         <action application="set" data="call_timeout=600"/>
         <!--<action application="set" data="continue_on_fail=NORMAL_TEMPORARY_FAILURE,TIMEOUT,NO_ROUTE_DESTINATION"/>-->
-        <action application="set" data="continue_on_fail=true"/>
+        <!--<action application="set" data="continue_on_fail=true"/>-->
+        <!--<action application="set" data="ndlb_sendrecv_in_session=true"/>-->
+        <!--<action application="info" data=""/>-->
         <action application="bridge" data="user/${dialed_extension}@${domain_name}"/>
         <action application="log" data="INFO hangup cause ${originate_disposition}"/>
         <action application="hangup"/>

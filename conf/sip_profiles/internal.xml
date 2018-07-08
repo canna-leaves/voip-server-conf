@@ -99,7 +99,7 @@
     <param name="sip-ip" value="$${local_ip_v4}"/>
     <param name="hold-music" value="$${hold_music}"/>
     <!--<param name="apply-nat-acl" value="nat.auto"/>-->
-    <param name="apply-nat-acl" value="rfc1918"/>
+    <param name="apply-nat-acl" value="nat.auto"/>
 
 
     <!-- (default true) set to false if you do not wish to have called party info in 1XX responses -->
